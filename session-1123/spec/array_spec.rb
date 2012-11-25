@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/../test'
+require File.dirname(__FILE__) + '/../first_class'
 
-describe "Array operation" do
+describe "Array operation in first class" do
   specify { double_it([1, 2, 3, 4]).should == [2, 4, 6, 8] }
   specify { double_it([]).should == [] }
   specify { sum([1, 2, 3, 4]).should == 10 }
