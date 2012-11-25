@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../first_class'
+require File.dirname(__FILE__) + '/../src/first_class'
 
 describe "Array operation in first class" do
   specify { double_it([1, 2, 3, 4]).should == [2, 4, 6, 8] }
