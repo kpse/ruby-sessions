@@ -38,18 +38,17 @@ def random_generate_map x, y
   end
 end
 
-row = 80
-column = 80
+row = (ARGV[0] || 50).to_i
+column = (ARGV[1] || 100).to_i
+rounds = (ARGV[2] || 100).to_i
 
 g = Game.new random_generate_map(column, row)
 
-100.times.inject(g) do |n, cur|
+rounds.times.inject(g) do |n, cur|
   
-  print "="*column
+  print "="*column + "#{cur}\n"
   print "#{n.print '||'}"
-  print "="*column
+  print "="*column + "#{cur}\n"
   sleep 0.2
   n.next
 end
-
-
